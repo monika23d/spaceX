@@ -1,0 +1,12 @@
+<div class='launch-container'>
+    <div *ngFor="let details of launchDetails" class='launch-details'>
+        <div class='mission-class'>
+            <div class='img-class'><img src="{{details.imgLink}}" alt="rocket img"></div>
+            <div class='details-span'>{{details.missionName}}#{{details.flightNum}}</div>
+            <div>Mission Ids:<span class='details-span'>{{details.missionID}}</span></div>
+            <div>Launch Year:<span class='details-span'>{{details.launchYear}}</span></div>
+            <div>Successfull Launch:<span class='details-span'>{{details.successLaunch}}</span></div>
+            <div>Successfull Landing:<span class='details-span'>{{details.rocketDetails[0].land_success}}</span></div>
+        </div>
+    </div>
+</div>

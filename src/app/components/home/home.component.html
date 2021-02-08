@@ -1,0 +1,12 @@
+<div ngClass="{'spinner':showSpinner}">
+    <div class='title-class'>SpaceX Launch Programs</div>
+    <div class='home-container'>
+        <div class='child-container'>
+            <filter (sendLaunch)='sendLaunch($event)'></filter>
+        </div>
+        <div  class='child-container'>
+            <launch-details [recieveYear]='launchYear' (showSpinner) = 'updateSpinner($event)'></launch-details>
+        </div>
+    </div>
+</div>
+

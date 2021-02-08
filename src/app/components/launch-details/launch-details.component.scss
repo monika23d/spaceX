@@ -1,0 +1,51 @@
+$mobile : 700px;
+  
+  .launch-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .launch-details{
+    margin: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 200px;
+  }
+  .img-class {
+    background-color: rgb(235, 231, 231);
+  }
+
+  .img-class > img {
+      height: 100%;
+      width: 100%;
+  }
+
+  .mission-class {
+      font-size: small;
+      font-weight: bold;
+      line-height: 20px;
+  }
+
+  .details-span {
+      color: gray;
+  }
+
+
+  // media query some CSS
+  @media screen and (max-width: $mobile) {
+    .launch-container {
+        margin: 10px;
+      }
+  }
+
+  @media screen and (min-width:701px), screen and (max-width:1024px) {
+    .launch-details{
+        margin: 10px;
+        background-color: #ffffff;
+        padding: 10px;
+        width: 180px;
+      }
+  }
+
+  

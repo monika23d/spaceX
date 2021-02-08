@@ -1,0 +1,25 @@
+<div class='main-container'>
+    <div class='filter-container'>
+        <div>Filters</div>
+        <div class='class-decor'>Launch Year</div>
+        <div class='year-div'>
+            <div *ngFor='let yr of launchYear' >
+                <button class='year-class' (click)='onYearFiler(yr)'>{{yr}}</button>
+            </div>
+            <button class='year-class' (click)='onReset()'>Reset</button>
+        </div>
+        <div>
+            <div class='class-decor'>SuccessFul Launch</div>
+            <div class='success-launch-landing'>
+                <button (click)='onLaunchSuccess(true)'>True</button><button (click)='onLaunchSuccess(false)'>False</button>
+            </div>
+        </div>
+        
+        <div>
+            <div class='class-decor'>SuccessFul Landing</div>
+            <div class='success-launch-landing'>
+                <button (click)='onLandSuccess(true)'>True</button><button (click)='onLandSuccess(false)'>False</button>
+            </div>
+        </div>
+    </div>
+</div>
