@@ -6,7 +6,7 @@
     "startUi": "ng serve --proxy-config proxy.conf.json --open",
     "startNode": "node ./bin/server",
     "start": "concurrently \"npm run startNode\" \"npm run startUi\"",
-    "build": "rimraf ./build && tsc /ng build",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
