@@ -43,4 +43,5 @@ const launchService = {
     }
 }
 
-module.exports = launchService
+// module.exports = launchService
+module.exports.handler = serverless(launchService);
