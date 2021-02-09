@@ -5,8 +5,8 @@
     "ng": "ng",
     "startUi": "ng serve --proxy-config proxy.conf.json --open",
     "startNode": "node ./bin/server",
-    "start": "concurrently \"npm run startNode\" \"npm run startUi\"",
-    "build": "ng build",
+    "start": "npm run startNode",
+    "build": "netlify-lambda build server && ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -51,6 +51,8 @@
     "eslint": "^7.19.0",
     "nodemon": "^2.0.7",
     "rimraf": "^3.0.2",
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "netlify-lambda": "^1.6.3",
+    "serverless-http": "^2.3.0"
   }
 }

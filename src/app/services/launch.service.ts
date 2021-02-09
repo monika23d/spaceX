@@ -22,7 +22,7 @@ import { catchError, map, tap } from 'rxjs/operators';
     if(this.launchDetails){
       return of(this.launchDetails)
     } else {
-      return this.http.get('http://localhost:3000/api/launch/')
+      return this.http.get('/.netlify/functions/server/api/launch/')
       .pipe(
         map((response) => response),
         tap((resp) =>{
