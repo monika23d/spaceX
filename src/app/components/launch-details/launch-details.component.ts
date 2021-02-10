@@ -36,7 +36,9 @@ export class LaunchDetailsComponent implements OnInit {
       this.showSpinner.emit(false)
       this.allDetails = this.composeData(resp)
       this.launchDetails = JSON.parse(JSON.stringify(this.allDetails))
-    })
+    },(err =>{
+      console.log('Service Error')
+    }))
   }
 
   composeData(resp: any[]){
