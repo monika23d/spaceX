@@ -34,8 +34,25 @@ export class LaunchDetailsComponent implements OnInit {
     })
     this._launchService.getLaunch().subscribe((resp) =>{
       this.showSpinner.emit(false)
-      this.allDetails = resp.slice(0,10)
+      this.allDetails = this.composeData(resp)
       this.launchDetails = JSON.parse(JSON.stringify(this.allDetails))
     })
   }
+
+  composeData(resp: any[]){
+    let launchDetailsArr:any  = []
+    resp.forEach(elm => {
+            let launch = {
+                missionName:elm.mission_name,
+                flightNum: elm.flight_number,
+                missionID: elm.mission_id,
+                launchYear: elm.launch_year,
+                successLaunch:elm.launch_success ? elm.launch_success : false,
+                rocketDetails:elm.rocket.first_stage && elm.rocket.first_stage.cores,
+                imgLink:elm.links && elm.links.mission_patch_small
+            }
+            launchDetailsArr.push(launch)
+        });
+        return launchDetailsArr
+    }
 }
